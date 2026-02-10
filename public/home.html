@@ -1,0 +1,165 @@
+<section>
+    <div class="parContainer">
+        <img src="./Welcome_animation.png" alt="Two brothers moving a trash bin">                    
+        <h2>Welcome to Bin Brothers!</h2>
+        <p>We are a team of two brothers making life easier for our neighbors, one bin at a time.</p>
+
+        <p>Use the menu on the left to explore! We’ve kept our navigation <em>light</em> and <em>playful</em> — see if you can discover the hidden logo trick while you’re there.</p>
+
+        <ul>
+            <li><span class="bullet">🟠</span><strong><a href="./about.html">About</a>:</strong> Learn who we are and what drives our mission.</li>
+            <li><span class="bullet">🟠</span><strong><a href="./contact.html">Contact</a>:</strong> Drop us a message — we reply within 24 hours!</li>
+            <li><span class="bullet">🟠</span><strong><a href="./gallery.html">Gallery</a>:</strong> Take a peek at our Instagram to see our work and neighborhood routes.</li>
+            <li><span class="bullet">🟠</span><strong><a href="./signup.html">Sign Up</a>:</strong> Want to stop worrying about bin collection days? Join us and we’ll handle it for you.</li>
+        </ul>
+    </div>
+</section>
+<style>
+    section {
+        margin-top: -40px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        /* gap: calc(15px + 0.5vh); */
+    }
+    section .parContainer {
+        max-width: 80%;
+        height: auto;
+        /* padding-bottom: 5vh; */
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 2vh;
+    }
+    section img {
+        align-self: center;
+        
+        width: 34%;
+        height: auto;
+    }
+
+    section h2 {
+        margin-bottom: 20px;
+        font-weight: 900;
+        /* font-size: calc(1.5rem + 1.75vw); */
+        font-size: clamp(1.95rem, 5vw, 2.5rem);
+        letter-spacing: calc(0.05rem + 0.05vw);
+        color: gold;
+        text-shadow: 0 0 6px black,
+                    0 0 4px black,
+                    0 0 2px black;
+    }
+    section p {
+        padding-left: 20px;  /* Has the same effect as - text-indent: 20px - but for the whole paragraph not just the first line */
+        width: 85%;
+
+        font-size: calc(1rem + 0.35vw);
+        color: gold;
+        text-shadow: 0 0 4px black,
+                    0 0 2px black,
+                    0 0 1px black;
+        font-weight: 600;
+        line-height: 2rem;
+        letter-spacing: calc(0.05rem + 0.01vw);
+        /* text-align-last: right; */
+    }
+    section ul {
+        align-self: center;
+        width: 80%;
+        margin-left: 20px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: calc(15px + 0.1vh);
+
+        list-style-type: none;
+    }
+    section ul li {
+        display: grid;
+        grid-template-columns: 1.5em max-content 1fr;
+        align-items: start;
+        column-gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        font-size: calc(1rem + 0.35vw);
+        color: gold;
+        text-shadow: 0 0 4px black,
+                    0 0 2px black,
+                    0 0 1px black;
+        font-weight: 600;
+        line-height: 2rem;
+        letter-spacing: calc(0.05rem + 0.05vw);
+        text-align-last: left;
+    }
+    section ul li .bullet {
+        display: inline-block;
+        text-align: start;
+    }
+    section li strong {
+        /* text-decoration: underline orangered 2px; */
+        white-space: nowrap;
+    }
+    section ul li a {
+        text-decoration: underline orangered 2px;
+        color: inherit;
+    }
+    
+    /* Larger phones than Samsung Galaxy S21 */
+    @media (min-width: 360px) and (max-width: 650px) {
+        section {
+            margin-top: -20px;
+        }
+        section .parContainer {
+            max-width: 95%;
+            gap: calc(5px + 1dvh);
+        }
+        section h2 {
+            font-size: clamp(3.25dvw, 24px, 5.25dvw);
+            margin-bottom: calc(5px + 1dvh);
+        }
+        section p {
+            font-size: clamp(2.25dvw, 16px, 3.25dvw);
+            line-height: calc(8px + 1.25dvh);
+        }
+        section ul {
+            gap: calc(5px + 0.5dvh)
+        }
+        section ul li {
+            grid-template-columns: 6dvw max-content 1fr;
+            font-size: calc(8px + 1dvw);
+            line-height: 3dvh;
+            column-gap: 2dvw;
+        }
+    }
+    /* Samsung Galaxy S21 - Width = 360px */
+    @media (max-width: 360px) {
+        section {
+            margin-top: -20px;
+        }
+        section .parContainer {
+            max-width: 95%;
+            gap: calc(5px + 1dvh);
+        }
+        section h2 {
+            font-size: clamp(3.25dvw, 24px, 5.25dvw);
+            margin-bottom: calc(5px + 1dvh);
+        }
+        section p {
+            font-size: clamp(2.25dvw, 16px, 3.25dvw);
+            line-height: calc(8px + 1.25dvh);
+        }
+        section ul {
+            gap: calc(5px + 0.5dvh)
+        }
+        section ul li {
+            grid-template-columns: 6dvw max-content 1fr;
+            font-size: calc(8px + 1dvw);
+            line-height: 3dvh;
+            column-gap: 2dvw;
+        }
+    }
+
+</style>

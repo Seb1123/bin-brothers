@@ -1,0 +1,122 @@
+<main class="container">
+<section class="hero">
+    <!-- <span class="kicker">Bin Brothers • Bakersfield</span> -->
+    <h1 class="title">Sign Up</h1>
+    <p class="subtitle">We roll your bins out & back in on collection day. You won't have to worry about your bins lingering on the curb. Flat <strong>$25/month</strong>. Cancel anytime.</p>
+    <div class="badges">
+    <span class="badge">🔒 Secure checkout by Stripe</span>
+    <span class="badge">💆 Stress-free bin management</span>
+    <span class="badge">📍 Bakersfield, CA</span>
+    </div>
+</section>
+
+<section class="grid">
+    <!-- Left: details & FAQs -->
+    <div class="card left-card">
+    <h3>What you get</h3>
+    <ul class="list">
+        <li>✅ Ensure your bins never miss collection day</li>
+        <li>✅ Photo confirmation upon request</li>
+        <li>✅ Friendly, uniformed service</li>
+    </ul>
+
+    <h3 style="margin-top:16px">How sign-up works</h3>
+    <ul class="list" style="margin-left:0px">
+        <li>▶️ Tap “Secure Checkout” to subscribe at $25/mo.</li>
+        <li>▶️ Make sure to enter your <strong>shipping address</strong>!</li>
+        <li>▶️ You'll be redirected to our confirmation page.</li>
+    </ul>
+
+    <h3 style="margin-top:16px">FAQs</h3>
+    <details><summary>When will service start?</summary>
+        <p class="muted">We begin on your next available trash day after sign-up. Billing renews monthly from your sign-up date.</p>
+    </details>
+    <details><summary>Which bins do you service?</summary>
+        <p class="muted">Once subscribed, we service <strong>ALL</strong> of your bins: trash, recycling, and organic waste. </p>
+    </details>
+    <details><summary>Can I cancel anytime?</summary>
+        <p class="muted">Yes. You can cancel from your confirmation email or by contacting us. Your service continues through the end of the paid period.</p>
+    </details>
+    <details><summary>Is my payment secure?</summary>
+        <p class="muted">All payments are handled by <a href="https://stripe.com/" target="_blank" rel="noopener noreferrer">Stripe</a>. We never see or store your card number.</p>
+    </details>
+    </div>
+
+    <!-- Right: price + CTA -->
+    <div class="card right-card" aria-live="polite">
+    <div class="price">$25<span class="muted">/month</span></div>
+    <div class="line"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Valet on trash day</div>
+    <div class="line"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bakersfield service area</div>
+    <div class="line"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enjoy 40% off your first month! Use promo code:</div>
+
+    <div class="promoCode">WELCOME2026</div>
+
+    <form action="/create-checkout-session" method="POST">
+        <button id="checkoutBtn" class="btn" style="margin-top:14px" type="submit">🔒 Stripe Checkout</button>
+    </form>
+
+    <div class="notice small">If you have any questions or requests, feel free to contact us. We will respond within 24hrs.</div>
+    </div>
+</section>
+</main>
+<style>
+    /* :root { color-scheme: light; } */
+    /* body{background:#f9fafb;color:#111827;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif} */
+    main.container{max-width:900px;margin: 0 auto 0 auto;padding:10px 32px;display:flex;flex-flow:column;justify-content:flex-start;align-items:center;background-color:inherit;color:gold;text-shadow: 0px 0px 5px black;font-size: calc(1rem + 0.25vw);}
+    .hero{display:grid;gap:16px;margin: 0 0 24px 0}
+    /* .kicker{font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:#4b5563} */
+    .title{margin: 0 auto 30px auto;font-weight:900;font-size:calc(2rem+0.2vw);letter-spacing:calc(0.1rem+0.1vw);color:gold;text-shadow: 0 0 4px black,0 0 2px black,0 0 1px black;}
+    .subtitle{font-size:calc(1rem + 0.35vw);font-weight:600;color:gold;text-shadow: 0 0 4px black,0 0 2px black,0 0 1px black;line-height:2rem;letter-spacing:calc(0.05rem+0.025vw);}
+    .grid{display:grid;gap:16px;grid-template-columns:1fr}
+    .card{border:2px solid black;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.05);background:cadetblue}
+    .card.left-card{display:flex;flex-flow:column nowrap;gap: 1vh;border-style:inset;}
+    .card h2{text-shadow:0px 0px 4px black,0px 0px 2px black;}
+    .price{font-size:2rem;font-weight:800}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:14px 18px;font-weight:700;border:1px solid transparent;background:#111827;color:#fff;cursor:pointer;transition:transform .04s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn[disabled]{opacity:.6;cursor:not-allowed}
+    .muted{color:white;font-size:calc(.95rem + 0.25vw)}
+    .small{font-size:.85rem}
+    .list{margin:12px 0 0 0;padding:0;list-style-type:decimal;list-style-position: outside;}
+    .list li{display:block;margin:6px 0;}
+    .list li strong{display:inline;}
+    .badge{display:inline-flex;gap:6px;align-items:center;background:cadetblue;border:2px solid black;border-style: inset;border-radius:999px;padding:6px 10px;font-size:calc(.85rem + 0.25vw);text-shadow:0px 0px 4px black,0px 0px 2px black;}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    details{padding:12px 16px;display:flex;flex-flow:column nowrap;justify-content:center;align-items:flex-start;gap:0.75vh;border:1px solid #e5e7eb;border-radius:12px;background:cadetblue}
+    details+details{margin-top:8px}
+    details summary{cursor:pointer;font-weight:600}
+    details a{color:inherit;text-decoration-color: orangered;}
+    .right-card .line{display:flex;align-items:center;gap:10px;margin-top:8px;color:gold}
+    .right-card .line svg{width:24px;height:24px;flex-shrink:0;display:inline-block}
+    .notice{background:#f8fafc;border:1px dashed #cbd5e1;color:#334155;text-shadow:none;border-radius:12px;padding:12px 14px;margin-top:12px;font-size: calc(0.75rem + 0.1vw);}
+    .promoCode{margin-top:8px;text-align:center;color:orange;font-weight:900;font-size:24px;font-style:italic}
+    #checkoutBtn{
+        font-size: calc(1rem + 0.20vw);
+        transition: none;
+        transform: none;
+    }
+    
+    @media(min-width:820px){ .grid{grid-template-columns:1.2fr 0.8fr} .title{font-size:2.4rem} }
+
+    /* Larger phones than Samsung Galaxy S21 */
+    @media (min-width: 360px) and (max-width: 650px) {
+        .hero h1 {
+            font-size: calc(24px + 1dvw);
+        }
+        .hero p {
+            font-size: calc(8px + 1dvw);
+            line-height: calc(5px + 3.25dvh);
+        }
+    }
+    /* Samsung Galaxy S21 - Width = 360px */
+    @media (max-width: 360px) {
+        .hero h1 {
+            font-size: calc(24px + 1dvw);
+        }
+        .hero p {
+            font-size: calc(8px + 1dvw);
+            line-height: calc(5px + 3.25dvh);
+        }
+    }
+  </style>
+  

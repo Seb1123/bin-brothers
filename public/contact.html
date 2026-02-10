@@ -1,0 +1,204 @@
+<section>
+    <h1>Contact</h1>
+    <div class="parContainer">
+        <p>
+            Got a question about our roll-out, roll-in service? Interested in signing up for our
+            $15 first-month trial? Or just want to say hello? We'd love to hear from you!
+        </p>
+        <p>
+            Fill out the form below and we'll get back to you within 24hrs.
+            You can also reach us directly at <a href="mailto:binbrothers.service@gmail.com">binbrothers.service@gmail.com</a>
+        </p>
+        <form action="https://formspree.io/f/mkgqgjap" method="POST">
+            <label>
+                Your email:
+                <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>
+                Your message:
+                <textarea name="message" rows="20" cols="65" required></textarea>
+            </label>
+            <label style="display: none !important;">
+                Your company:
+                <input type="text" name="company" tabindex="-1" autocomplete="off">
+            </label>
+            <button id="email" type="submit">Send</button>
+        </form>
+        <p class="note">
+            We're local, friendly, and quick to respond. We are real people from the neighborhood making
+            sure your bins are handled with care!
+        </p>
+    </div>
+</section>
+<style>
+    section {
+        margin-bottom: 30px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 4vh;
+
+        color: gold;
+    }
+    section .parContainer {
+        max-width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 2.5vh;
+    }
+    section h1 {
+        font-weight: 900;
+        font-size: calc(2rem + 0.2vw);
+        letter-spacing: calc(0.1rem + 0.1vw);
+        color: gold;
+        text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+    }
+    section p {
+        font-size: calc(1rem + 0.35vw);
+        font-weight: 600;
+        color: gold;
+        text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+        line-height: 2rem;
+        letter-spacing: calc(0.05rem + 0.025vw);
+    }
+    section a {
+        text-decoration: underline;
+        text-decoration-color: orangered;
+        color: gold;
+    }
+    section label {
+        font-size: calc(1rem + 0.35vw);
+        font-weight: 600;
+        line-height: 2.5rem;
+        letter-spacing: calc(0.05rem + 0.05vw);
+        color: gold;
+        text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+    }
+    section form {
+        align-self: stretch;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        gap: 2vh;
+    }
+    section form label:first-child input{
+        height: calc(25px + 1vh);
+    }
+    section form label {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    section input,textarea {
+        padding: 1vh 1vw;
+        width: 90%;
+
+        border-radius: 20px;
+        background-color: cadetblue;
+        color: white;
+        font-family: monospace;
+        font-size: 1rem;
+        font-weight: 700;
+        border-width: 2px;
+        border-style: inset;
+        border-color: #767676;
+    }
+    section #email {
+        padding: 1vh 1vw;
+        align-self: flex-start;
+        height: auto;
+        width: clamp(75px, 10%, 100px);
+
+        color: gold;
+        background-color: inherit;
+        border-style: outset;
+        border-radius: 20px;
+        font-size: calc(1rem + 0.1vw);
+        font-weight: 900;
+        letter-spacing: 0.1vw;
+        transform: none;
+        text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+    }
+    input[name="company"] {
+        position: absolute !important;
+        left: -9999px !important;
+        top: -9999px !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Larger phones than Samsung Galaxy S21 */
+    @media (min-width: 360px) and (max-width: 650px) {
+        section .parContainer {
+            gap: calc(2px + 2dvh);
+        }
+        section h1 {
+            font-size: calc(24px + 1dvw);
+        }
+        section p {
+            font-size: calc(8px + 1dvw);
+            line-height: calc(5px + 2dvh);
+        }
+        section label {
+            font-size: calc(10px + 1dvw);
+            line-height: calc(5px + 3.5dvh);
+        }
+        section form label:first-child input{
+            height: calc(15px + 1vh);
+        }
+        section textarea {
+            height: 20dvh;
+        }
+        section input,textarea {
+            width: 95%;
+            font-size: calc(10px + 1dvw);
+        }
+    }
+    /* Samsung Galaxy S21 - Width = 360px */
+    @media (max-width: 360px) {
+        section .parContainer {
+            gap: calc(2px + 2dvh);
+        }
+        section h1 {
+            font-size: calc(24px + 1dvw);
+        }
+        section p {
+            font-size: calc(8px + 1dvw);
+            line-height: calc(5px + 2dvh);
+        }
+        section label {
+            font-size: calc(10px + 1dvw);
+            line-height: calc(5px + 3.5dvh);
+        }
+        section form label:first-child input{
+            height: calc(15px + 1vh);
+        }
+        section textarea {
+            height: 20dvh;
+        }
+        section input,textarea {
+            width: 95%;
+            font-size: calc(10px + 1dvw);
+        }
+    }
+</style>
+

@@ -1,0 +1,60 @@
+<section>
+    <h1>Gallery</h1>
+    <img src="./Gallery_Construction_animation.png" alt="Bin Brothers fixing a trash bin">
+    <p>Come back soon! Gallery section is under construction!</p>
+</section>
+<style>
+    section {
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5vh;
+
+        color: gold;
+    }
+    section h1 {
+        font-weight: 900;
+        font-size: calc(2rem + 0.2vw);
+        letter-spacing: calc(0.1rem + 0.1vw);
+        color: gold;
+        text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+    }
+    section img {
+        width: 35%;
+        height: auto;
+    }
+    section p {
+        font-size: calc(1rem + 0.35vw);
+        font-weight: 600;
+        line-height: 2.5rem;
+        letter-spacing: calc(0.05rem + 0.05vw);
+        color: gold;
+        text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+    }
+
+    /* Larger phones than Samsung Galaxy S21 */
+    @media (min-width: 360px) and (max-width: 650px) {
+        section h1 {
+            font-size: calc(24px + 1dvw);
+        }
+        section p {
+            font-size: calc(8px + 0.5dvw);
+        }
+    }
+    /* Samsung Galaxy S21 - Width = 360px */
+    @media (max-width: 360px) {
+        section h1 {
+            font-size: calc(24px + 1dvw);
+        }
+        section p {
+            font-size: calc(8px + 0.5dvw);
+        }
+    }
+</style>

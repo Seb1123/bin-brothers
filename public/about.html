@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <section>
+        <h1>About</h1>
+        <div class="parContainer">
+            <p>We’re two brothers who have called Haggin Oaks home for over 8 years. From day one, we’ve been impressed by the cleanliness of our neighborhood, and we’re grateful to be part of such a great community.</p>
+            <p>Out of that gratitude grew a passion: we want to contribute to keeping our streets clean and make life just a little easier for our neighbors. What began as a way to lend a hand (and maybe earn a bit of side income) has turned into our mission — to provide reliable, professional trash bin services here in Haggin Oaks and, with time, across Bakersfield.</p>
+            <p>As residents, we feel responsible for maintaining the beauty of our streets. That’s why we take pride in offering services that are consistent, convenient, and community-minded.</p>
+            <p>With Bin Bros, you’ll never have to worry about trash day again. We’ll roll your bins out and back in on time, keep them clean, and give you one less chore to think about. Our goal is simple: provide the best trash bin service possible, starting with our own neighborhood.</p>
+            <p>If you’re interested, <a href="./signup.html">check out our prices and services.</a> If you have any questions or would like to reach out, we’d love to hear from you. <a href="./contact.html">Give us a call or send us an email.</a> Let’s keep Haggin Oaks (and Bakersfield) cleaner, together.</p>
+            <p><em>— Sincerely, your neighbors, The Bin Bros</em></p>
+        </div>
+    </section>
+    <style>
+        section {
+            margin-bottom: 30px;
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5vh;
+        }
+        section .parContainer {
+            max-width: 80%;
+            height: auto;
+
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 3.5vh;
+        }
+        section h1 {
+            font-weight: 900;
+            font-size: calc(2rem + 0.2vw);
+            letter-spacing: calc(0.1rem + 0.1vw);
+            color: gold;
+            text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+        }
+        section p {
+            font-size: calc(1rem + 0.35vw);
+            color: gold;
+            text-shadow: 0 0 4px black,
+                        0 0 2px black,
+                        0 0 1px black;
+            font-weight: 600;
+            line-height: 2rem;
+            letter-spacing: calc(0.05rem + 0.025vw);
+        }
+        section a {
+            text-decoration-color: orangered;
+            color: gold;
+        }
+
+        /* Larger phones than Samsung Galaxy S21 */
+        @media (min-width: 360px) and (max-width: 650px) {
+            section .parContainer {
+                gap: calc(2px + 2dvh);
+            }
+            section h1 {
+                font-size: calc(24px + 1dvw);
+            }
+            section p {
+                font-size: calc(8px + 1dvw);
+                line-height: calc(5px + 2dvh);
+            }
+        }
+        /* Samsung Galaxy S21 - Width = 360px */
+        @media (max-width: 360px) {
+            section .parContainer {
+                gap: calc(2px + 2dvh);
+            }
+            section h1 {
+                font-size: calc(24px + 1dvw);
+            }
+            section p {
+                font-size: calc(8px + 1dvw);
+                line-height: calc(5px + 2dvh);
+            }
+        }
+    </style>
+</html>

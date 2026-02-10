@@ -1,0 +1,430 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center; 
+} 
+main {
+    align-self: stretch;
+    flex: 1 0 auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: calc(75px + 15vh); */
+
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); */
+} 
+.main-left {
+    position: relative; /*So that the box-shadow property will work */
+    align-self: stretch;
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: cadetblue;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+} 
+.main-left header {
+    align-self: stretch;
+    padding: 5px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+
+    color: gold;
+    background-color: orangered;
+    font-weight: 900;
+    font-size: clamp(10px, 2vw, 20px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 780px) {
+    .main-left header p:last-of-type{
+        display: none;
+    }
+}
+.main-left .side-top {
+    align-self: stretch;
+    flex: 1 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+} .main-left .side-bottom {
+    align-self: stretch;
+    flex: 1 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: calc(50px + 4vw)
+} .main-right {
+    align-self: stretch;
+    flex: 9 0 900px;
+    max-height: 100vh;
+    padding-top: 5vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: linear-gradient(180deg, rgba(77,127,128,0.95) 15%, rgba(77,127,128,1) 55%);
+    /* background-color: rgb(77, 127, 128); */
+    background-attachment: scroll;
+    overflow-y: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.7) transparent;
+} 
+footer {
+    align-self: stretch;
+    padding: 2.5vh 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+} footer p {
+    margin-top: calc(-10px - 4vh);
+    color: gold;
+    font-size: clamp(1.15rem, 2.75vw, 1.75rem);/* calc(1rem + 0.15vw); */
+    font-weight: 600;
+    text-shadow: 0 0 4px black,
+                 0 0 2px black,
+                 0 0 1px black;
+                 font-weight: 600;
+    letter-spacing: calc(0.05rem + 0.05vw);
+} footer small {
+    margin-right: calc(15px + 0.25vw);
+    margin-bottom: calc(-5px - 0.5vw);
+    align-self: flex-end;
+
+    color: white;
+    font-size: clamp(0.60rem, 1.30vw, 0.85rem);
+    letter-spacing: calc(0.02rem + 0.02vw);
+    font-style:italic;
+    opacity: 0.6;
+} footer small:hover {
+    opacity: 0.9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 1px 1px);
+    white-space: nowrap;
+    border: 0px;
+}
+
+/* Logo Image change */
+svg#logoinitial{
+    width: clamp(200px, 25vw, 500px);
+    height: auto;
+}
+#logo {
+    transition: transform 0.75s ease;
+    will-change: transform;
+    transform-box: view-box;
+    transform-origin: 100px 100px;
+}
+
+/* Button logic and SVG scaling */
+button {
+    background-color: inherit;
+    border-style: none;
+    cursor: pointer;
+}
+button svg {
+    width: clamp(75px, 15vw, 150px);
+    height: auto;
+}
+/* Nav buttons grows */
+button:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+/* Logo button doesn't grow */
+button#home:hover {
+    transform: none;
+}
+@media (hover:hover) and (pointer:fine) {
+    #logoinitial:hover #logo {
+        transform: scale(1.2);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    #logo { transition: none; transform: none; }
+}
+
+
+
+/* Right side section */
+.home-right {
+    margin-top: -40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: calc(15px + 0.5vh); */
+}
+.home-right .parContainer {
+    max-width: 80%;
+    height: auto;
+    /* padding-bottom: 5vh; */
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2vh;
+}
+.home-right img {
+    align-self: center;
+    
+    width: 34%;
+    height: auto;
+}
+
+.home-right h2 {
+    margin-bottom: 20px;
+    font-weight: 900;
+    /* font-size: calc(1.5rem + 1.75vw); */
+    font-size: clamp(1.95rem, 5vw, 2.5rem);
+    letter-spacing: calc(0.05rem + 0.05vw);
+    color: gold;
+    text-shadow: 0 0 6px black,
+                0 0 4px black,
+                0 0 2px black;
+}
+.home-right p {
+    padding-left: 20px;  /* Has the same effect as - text-indent: 20px - but for the whole paragraph not just the first line */
+    width: 85%;
+
+    font-size: calc(1rem + 0.35vw);
+    color: gold;
+    text-shadow: 0 0 4px black,
+                0 0 2px black,
+                0 0 1px black;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: calc(0.05rem + 0.01vw);
+    /* text-align-last: right; */
+}
+.home-right ul {
+    align-self: center;
+    width: 80%;
+    margin-left: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: calc(15px + 0.1vh);
+
+    list-style-type: none;
+}
+.home-right ul li {
+    display: grid;
+    grid-template-columns: 1.5em max-content 1fr;
+    align-items: start;
+    column-gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    font-size: calc(1rem + 0.35vw);
+    color: gold;
+    text-shadow: 0 0 4px black,
+                0 0 2px black,
+                0 0 1px black;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: calc(0.05rem + 0.05vw);
+    text-align-last: left;
+}
+.home-right ul li .bullet {
+    display: inline-block;
+    text-align: start;
+}
+.home-right li strong {
+    /* text-decoration: underline orangered 2px; */
+    white-space: nowrap;
+}
+.home-right ul li a {
+    text-decoration: underline orangered 2px;
+    color: inherit;
+}
+
+
+/* Media Queries --------------------------------------------------------- */
+/* Tablets */
+@media (min-width: 650px) and (max-width: 1200px) {
+    * {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    main {
+        flex-flow: column nowrap;
+    } .main-left {
+        flex: 1 0 600px;
+    } .main-left .side-top {
+        flex: 1 0 auto;
+        gap: 5vw;
+    } .main-left .side-bottom {
+        flex: 1 0 auto;
+    } 
+    .main-right {
+        flex: 7 0 auto;
+    }
+}
+
+/* Larger phones than Samsung Galaxy S21 */
+@media (min-width: 360px) and (max-width: 650px) {
+    * {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    main {
+        flex-flow: column nowrap;
+        align-items: stretch;
+        min-height: 100dvh;
+    } .main-left {
+        flex: 1 0 65svh;
+        min-height: 60svh;
+    } .main-left .side-top {
+        flex: 1 0 auto;
+    } .main-left .side-bottom {
+        flex: 1 0 auto;
+    } .main-left footer p {
+        font-size: clamp(0.5rem, 1vw, 0.75rem);
+        color: gold;
+    }
+    .main-right {
+        flex: 1 1 100svh;
+        min-height: 0;
+        max-height: none;
+        overflow-y: auto;
+        padding-top: 5svh;
+    }
+    .home-right {
+        margin-top: -20px;
+    }
+    .home-right .parContainer {
+        max-width: 95%;
+        gap: calc(5px + 1dvh);
+    }
+    .home-right h2 {
+        font-size: clamp(3.25dvw, 24px, 5.25dvw);
+        margin-bottom: calc(5px + 0.15dvh);
+    }
+    .home-right p {
+        font-size: clamp(2.25dvw, 16px, 3.25dvw);
+        line-height: calc(8px + 1.75dvh);
+    }
+    .home-right ul {
+        margin-top: calc(2px + 0.25dvh);
+        gap: calc(5px + 0.5dvh)
+    }
+    .home-right ul li {
+        grid-template-columns: 6dvw max-content 1fr;
+        font-size: calc(8px + 1dvw);
+        line-height: 3dvh;
+        column-gap: 2dvw;
+    }
+    button svg {
+        width: clamp(75px, 15vw, 150px);
+        height: auto;
+    }
+    .home-right {
+        margin-top: -20px;
+    }
+}
+
+/* Samsung Galaxy S21 - Width = 360px */
+@media (max-width: 360px) {
+    * {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    main {
+        flex-flow: column nowrap;
+        align-items: stretch;
+        min-height: 100dvh;
+    } .main-left {
+        flex: 1 0 60svh;
+        min-height: 60svh;
+    } .main-left .side-top {
+        flex: 1 0 auto;
+    } .main-left .side-bottom {
+        flex: 1 0 auto;
+    } .main-left footer p {
+        font-size: clamp(0.5rem, 1vw, 0.75rem);
+        color: gold;
+    }
+    .main-right {
+        flex: 1 1 100svh;
+        min-height: 0;
+        max-height: none;
+        overflow-y: auto;
+        padding-top: 5svh;
+    }
+    .home-right {
+        margin-top: -20px;
+    }
+    .home-right .parContainer {
+        max-width: 95%;
+        gap: calc(5px + 1dvh);
+    }
+    .home-right h2 {
+        font-size: clamp(3.25dvw, 24px, 5.25dvw);
+        margin-bottom: calc(5px + 0.15dvh);
+    }
+    .home-right p {
+        font-size: clamp(2.25dvw, 16px, 3.25dvw);
+        line-height: calc(8px + 1.75dvh);
+    }
+    .home-right ul {
+        margin-top: calc(2px + 0.25dvh);
+        gap: calc(5px + 0.5dvh)
+    }
+    .home-right ul li {
+        grid-template-columns: 6dvw max-content 1fr;
+        font-size: calc(8px + 1dvw);
+        line-height: 3dvh;
+        column-gap: 2dvw;
+    }
+    svg#logoinitial{
+        width: clamp(175px, 25dvw, 200px);
+        height: auto;
+    }
+    button svg {
+        width: clamp(75px, 15vw, 150px);
+        height: auto;
+    }
+}
