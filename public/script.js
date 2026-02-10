@@ -185,13 +185,16 @@ mainRight.addEventListener('click', (e) => {
 });
 
 // Stops bot submitions in on our company email------------------------------------------
-document.querySelector('form').addEventListener('submit', (e) => {
-  const honeypot = document.querySelector('input[name="company"]');
-  if (honeypot.value.trim() !== '') {
+const form = document.querySelector('form');
+if(form) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault(); // stop submission
-    console.warn('Spam submission blocked 🚫');
-  }
-});
+    const honeypot = document.querySelector('input[name="company"]');
+    if (honeypot.value.trim() !== '') {
+      console.warn('Spam submission blocked 🚫');
+    }
+  });
+};
 
 // Back/forward support
 // window.addEventListener('popstate', (ev) => {
