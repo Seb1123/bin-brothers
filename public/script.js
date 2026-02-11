@@ -37,8 +37,8 @@ function setHref(el, url) {
 function resolveSources() {
   const ds = img.dataset;
 
-  const desktopInitial = ds.desktopInitial || img.getAttribute("href") || "./TrashBin_ColoredLighter1.png";
-  const desktopFinal   = ds.desktopFinal   || ds.final || "./BinBrosLogo_Final_resize.png";
+  const desktopInitial = ds.desktopInitial || img.getAttribute("href") || "./trashbin.png";
+  const desktopFinal   = ds.desktopFinal   || ds.final || "./logo.png";
 
   // If you don’t have special mobile files yet, these will just use desktop ones.
   const mobileInitial  = ds.mobileInitial  || desktopInitial;
